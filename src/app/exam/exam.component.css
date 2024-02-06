@@ -1,0 +1,13 @@
+.inline-block {
+    display: inline-block;
+    width: 48%; /* Adjust the width as needed */
+    margin-right: 2%; /* Adjust the margin as needed */
+}
+.col-sm-10{
+    margin-bottom: 20px;
+}
+#wq{
+    background-color: aliceblue;
+    box-shadow: 20px 20px 60px orange,inset -20px -20px 60px #ffffff40;
+    
+}

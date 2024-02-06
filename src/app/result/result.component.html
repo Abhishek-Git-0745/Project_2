@@ -1,0 +1,112 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card" id="wq">
+                <div class="card-body ">
+                    <!-- <h2>RESULT</h2> -->
+                    <form>
+                        <div class="row">
+                            <!-- <div class="col-md-6"> -->
+                            <!-- <div class="form-group"> -->
+                                <!-- <label for="prnField">Enter PRN:</label> -->
+                                <!-- <div>{{ receivedData }}</div> -->
+                                <div class="form-group">
+                                    <input type="hidden" class="form-control" id="prnField" placeholder="Enter PRN"
+                                        [ngModelOptions]="{standalone: true}" [(ngModel)]="prnNumber" [readonly]="true" [value]="receivedData">
+                                </div>
+                            <!-- </div> -->
+
+                            <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
+                            <!-- </div> -->
+                            <!-- <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="courseField">Enter Course:</label>
+                                    <input type="text" class="form-control" id="courseField" placeholder="Enter Course">
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="form-group ">
+                            <label for="semesterSelect">Select Semester:</label>
+                            <div class="row">
+                                <div class="col-md-10">
+
+                                    <select class="form-control" id="semesterSelect">
+                                        <option value="" disabled selected>Select Semester</option>
+                                        <option value="1">Semester 1</option>
+                                        <option value="2">Semester 2</option>
+                                        <option value="3">Semester 3</option>
+                                        <option value="4">Semester 4</option>
+                                        <option value="5">Semester 5</option>
+                                        <option value="6">Semester 6</option>
+                                        <option value="7">Semester 7</option>
+                                        <option value="8">Semester 8</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="text-center">
+                                        <button type="submit" (click)="fetchStudentData()" class="btn btn-primary"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-search">
+                                                <circle cx="11" cy="11" r="8" />
+                                                <path d="m21 21-4.3-4.3" />
+                                            </svg></button>
+                                           
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center" style="margin-top: 20px;">
+        <div class="col-md-12">
+            <div class="card" id="wq" style="background-color:rgb(237, 235, 231);margin-bottom: 20px;">
+                <div class="card-body ">
+                    
+            <h3 class="text-center" style="color:#3652AD;"> Result</h3>
+                    <div *ngIf="studentData">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text-center">
+                                <p>Name: {{ studentData.name }}
+                                (PRN): {{ studentData.id }}</p>
+                                <!-- <p>CGPA: {{ studentData.CGPA }}</p>
+                        <p>SGPA: {{ studentData.SGPA }}</p> -->
+
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+
+
+                        <table class="table" >
+
+                            <tbody>
+
+                                <tr class="text-center">
+                                    <th>Course Name</th>
+                                    <td *ngFor="let course of studentData.courses">{{ course.course_name }}</td>
+                                    <td>CGPA:</td>
+                                    <td>SGPA:</td>
+                                </tr><br>
+                                <tr class="text-center">
+                                    <th>Marks</th>
+                                    <td *ngFor="let course of studentData.courses">{{ course.marks }}</td>
+                                    <td>{{ studentData.CGPA }}</td>
+                                    <td>{{ studentData.SGPA }}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

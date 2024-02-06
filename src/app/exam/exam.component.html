@@ -1,0 +1,180 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8" style="margin-bottom: 80px; margin-top: 30px;">
+            <div class="card mb-4" id="wq">
+                <div class="card-body ">
+                    <form [formGroup]="mainForm">
+
+                        <div class="form-group mb-4">
+                            <label for="semesterDropdown">Semester</label>
+                            <select class="form-control" id="semDropdown" name="sem" formControlName="sem">
+                                <option value="" disabled selected>Select Semester</option>
+                                <option value="I">I</option>
+                                <option value="II">II</option>
+                                <option value="III">III</option>
+                                <option value="IV">IV</option>
+                                <option value="V">V</option>
+                                <option value="VI">VI</option>
+                                <option value="VII">VII</option>
+                                <option value="VIII">VIII</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="examDropdown">Exam</label>
+                            <select class="form-control" name="exam" id="examDropdown" formControlName="exam">
+                                <option value="" disabled selected>Select Exam</option>
+                                <option value="Winter Exam">Winter Exam</option>
+                                <option value="Summer Exam">Summer Exam</option>
+                                <option value="Remidial Exam">Remidial Exam</option>
+                                <option value="Re-Exam">Re-Exam</option>
+                            </select>
+                        </div>
+
+
+                        <div class="text-center">
+                            <button (click)="onClick()" type="button" class="btn  btn-primary ">
+                                Submit
+                            </button>
+                        </div>
+
+                        <ng-container *ngIf="visible">
+                            <div class=" shadow-sm p-3">
+                                <div class="form-group">
+                                    <label for="nameInput">Name:</label>
+                                    <input type="text" class="form-control" id="nameInput"
+                                        placeholder="Enter your name" formControlName="name">
+                                </div>
+                                <br><br>
+
+
+
+                                <!-- Third Line: Class Division and Roll No. in Row -->
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="classInput">Class:</label>
+                                        <input type="text" class="form-control" id="classInput"
+                                            placeholder="Enter class" formControlName="class">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="DivisionInput">Division No:</label>
+                                        <input type="text" class="form-control" id="DivisionInput"
+                                            placeholder="Enter Div" formControlName="div">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="rollNoInput">Roll No:</label>
+                                        <input type="text" class="form-control" id="rollNoInput"
+                                            placeholder="Enter roll" formControlName="roll">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <!-- Second Line: Email -->
+                                <div class="form-group">
+                                    <label for="emailInput">Email:</label>
+                                    <input type="email" class="form-control" id="emailInput"
+                                        placeholder="Enter your email" formControlName="mail">
+                                </div>
+                                <br><br>
+
+                                <div>
+                                    <label for="courseField" style="text-align: center;">Enter Courses:</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-10">
+                                        <div class="form-group inline-block">
+                                            <input type="text" class="form-control" id="nameInput"
+                                                placeholder="Course 1" formControlName="c1">
+                                        </div>
+                                        <div class="form-group inline-block">
+                                            <input type="text" class="form-control" id="nameInput"
+                                                placeholder="Course 2" formControlName="c2">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-10">
+                                        <div class="form-group inline-block">
+                                            <input type="text" class="form-control" id="nameInput"
+                                                placeholder="Course 3" formControlName="c3">
+                                        </div>
+                                        <div class="form-group inline-block">
+                                            <input type="text" class="form-control" id="nameInput"
+                                                placeholder="Course 4" formControlName="c4">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-10">
+                                        <div class="form-group inline-block">
+                                            <input type="text" class="form-control" id="nameInput"
+                                                placeholder="Course 5" formControlName="c5">
+                                        </div>
+                                        <div class="form-group inline-block">
+                                            <input type="text" class="form-control" id="nameInput"
+                                                placeholder="Course 6" formControlName="c6">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-8 text-center">
+                                        <div class="form-group">
+                                            <label for="gg">Enter Fee Reciept Id: </label>
+                                            <input type="text" class="form-control" id="nameInput"
+                                                placeholder="Reciept id" formControlName="recp">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="container mt-3">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <form (ngSubmit)="uploadFile()" #fileForm="ngForm">
+
+                                                    <input type="file" class="form-control" id="fileInput" name="file"
+                                                        accept=".jpg, .jpeg, .png, .pdf"
+                                                        (change)="handleFileInput($event)" required>
+                                                    <label for="fileInput" class="form-label">Choose file(JPG, PNG, PDF
+                                                        | Max 4MB)</label>
+
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <button type="submit" class="btn btn-primary"
+                                                    [disabled]="fileForm.invalid">Upload</button>
+                                            </div>
+                                        </div>
+                                        <div *ngIf="errorMessage" class="mt-3 alert alert-danger">
+                                            {{ errorMessage }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn  btn-primary" (click)="onSubmit()">
+                                        Submit
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </ng-container>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

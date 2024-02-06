@@ -1,0 +1,78 @@
+[
+    {
+      "name": "John Doe",
+      "id": "1234567891",
+      "mail_id": "john.doe@example.com",
+      "password": "hashed_or_encrypted_password",
+      "courses": [
+        {"course_name": "Mathematics", "marks": 85},
+        {"course_name": "Physics", "marks": 90},
+        {"course_name": "Computer Science", "marks": 78},
+        {"course_name": "English", "marks": 92},
+        {"course_name": "History", "marks": 88}
+      ],
+      "CGPA":"8.44",
+      "SGPA":"7.92"
+    },
+    {
+      "name": "Jane Smith",
+      "id": "1234567892",
+      "mail_id": "jane.smith@example.com",
+      "password": "hashed_or_encrypted_password",
+      "courses": [
+        {"course_name": "Mathematics", "marks": 85},
+        {"course_name": "Physics", "marks": 90},
+        {"course_name": "Computer Science", "marks": 78},
+        {"course_name": "English", "marks": 92},
+        {"course_name": "History", "marks": 88}
+      ],
+      "CGPA":"8.44",
+      "SGPA":"7.92"
+    },
+    {
+      "name": "will Smith",
+      "id": "1234567893",
+      "mail_id": "will.smith@example.com",
+      "password": "hashed_or_encrypted_password",
+      "courses": [
+        {"course_name": "Mathematics", "marks": 85},
+        {"course_name": "Physics", "marks": 90},
+        {"course_name": "Computer Science", "marks": 78},
+        {"course_name": "English", "marks": 92},
+        {"course_name": "History", "marks": 88}
+      ],
+      "CGPA":"8.44",
+      "SGPA":"7.92"
+    },
+    {
+      "name": "hector turner",
+      "id": "1234567894",
+      "mail_id": "jane.smith@example.com",
+      "password": "hashed_or_encrypted_password",
+      "courses": [
+        {"course_name": "Mathematics", "marks": 85},
+        {"course_name": "Physics", "marks": 90},
+        {"course_name": "Computer Science", "marks": 78},
+        {"course_name": "English", "marks": 92},
+        {"course_name": "History", "marks": 88}
+      ],
+      "CGPA":"8.44",
+      "SGPA":"7.92"
+    },
+    {
+      "name": "josh gibbs",
+      "id": "1234567895",
+      "mail_id": "jane.smith@example.com",
+      "password": "hashed_or_encrypted_password",
+      "courses": [
+        {"course_name": "Mathematics", "marks": 85},
+        {"course_name": "Physics", "marks": 90},
+        {"course_name": "Computer Science", "marks": 78},
+        {"course_name": "English", "marks": 92},
+        {"course_name": "History", "marks": 88}
+      ],
+      "CGPA":"8.44",
+      "SGPA":"7.92"
+    }
+  ]
+  

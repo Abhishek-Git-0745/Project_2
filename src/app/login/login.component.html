@@ -1,0 +1,28 @@
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card" style="box-shadow: 5px 5px 5px 5px orange;">
+          
+          <div class="card-body ">
+            <h5 class="card-title text-center">Login</h5>
+            <form #loginform="ngForm" (ngSubmit)="getdata(loginform.value)">
+              <div class="form-group">
+                <label for="username">PRN NO :</label>
+                <input type="text" class="form-control" [(ngModel)]="sharedData" id="username" name="username" placeholder="Enter your username">
+              </div><br><br>
+              <div class="form-group" >
+                <label for="password">PASSWORD :</label>
+                <input type="password" class="form-control" ngModel id="password" name="password" placeholder="Enter your password" >
+              </div><br><br>
+              <div class="text-center">
+              <button type="submit" class="btn btn-block " (click)="sendData()" routerLink="resu" style="background-color: orange;">Login</button>
+              
+            </div>
+            </form>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,8 @@
+.row{
+    background-color: rgb(78, 77, 77);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    /* width: 100%; */
+}

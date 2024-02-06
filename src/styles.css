@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    background: "\assets\Particle_Wave_4K_Motion_Background_Loop.mp4";
+
+    overflow-y: scroll; /* Always show the vertical scrollbar */
+  }
+  
+  html {
+    height: 100%;
+    overflow: hidden; /* Hide the horizontal scrollbar */
+  }
+  
+  body, app-root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
